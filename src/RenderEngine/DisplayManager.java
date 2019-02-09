@@ -1,6 +1,7 @@
 package RenderEngine;
 
 import Game.MainGameLoop;
+import com.sun.tools.javac.Main;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
@@ -48,6 +49,7 @@ public class DisplayManager {
 
     public static void closeDisplay() {
         MainGameLoop.loader1.cleanUp();
+        MainGameLoop.shader1.cleanUp();
         Display.destroy();
         System.exit(1);
     }
