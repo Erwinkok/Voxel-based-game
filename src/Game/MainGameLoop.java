@@ -44,7 +44,7 @@ public class MainGameLoop {
         Camera camera = new Camera(new Vector3f(0, 0, 0), 0,0 ,0);
 
         RawModel model = loader.loadToVAO(CubeModel.vertices, CubeModel.indices, CubeModel.uvs);
-        ModelTexture texture = new ModelTexture(loader.loadTexture("dirtTex"));
+        ModelTexture texture = new ModelTexture(loader.loadTexture("DefaultPack1"));
         TexturedModel texturedModel = new TexturedModel(model, texture);
 
         PerlinNoiseGenerator generator = new PerlinNoiseGenerator();
@@ -60,7 +60,7 @@ public class MainGameLoop {
 
                             for(int i = 0; i < CHUNK_SIZE; i++) {
                                 for (int j = 0; j < CHUNK_SIZE; j++){
-                                    blocks.add(new Block(i, (int) generator.generateHeight(i + (x * CHUNK_SIZE), j + (z * CHUNK_SIZE)), j, Block.TYPE.DIRT));
+                                    blocks.add(new Block(i, (int) generator.generateHeight(i + (x * CHUNK_SIZE), j + (z * CHUNK_SIZE)), j, Block.GRASS));
                                 }
                             }
                             Chunk chunk = new Chunk(blocks, thisPosition);

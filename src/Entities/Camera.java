@@ -13,6 +13,8 @@ public class Camera {
 
     private float walkSpeed = 0.5f;
     private float turnSpeed = 0.5f;
+    private float jumpHeight = 1f;
+    private float velocity = 0.5f;
     private float moveAt = 0;
 
     public Camera(Vector3f position, float xRotation, float yRotation, float zRotation) {
