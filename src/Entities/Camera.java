@@ -11,7 +11,7 @@ public class Camera {
     private float yRotation;
     private float zRotation;
 
-    private float walkSpeed = 0.1f;
+    private float walkSpeed = 0.5f;
     private float turnSpeed = 0.5f;
     private float moveAt = 0;
 
