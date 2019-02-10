@@ -1,7 +1,6 @@
 package RenderEngine;
 
 import Game.MainGameLoop;
-import com.sun.tools.javac.Main;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
@@ -10,7 +9,7 @@ import org.lwjgl.opengl.*;
 public class DisplayManager {
     private static final int WIDTH = 1280;
     private static final int HEIGHT = 720;
-    private static final int FPS_CAP = 120;
+    private static final int FPS_CAP = 60;
 
 
     public static void createDisplay() {
